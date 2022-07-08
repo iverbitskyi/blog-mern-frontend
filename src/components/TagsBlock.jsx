@@ -7,6 +7,7 @@ import ListItemIcon from "@mui/material/ListItemIcon";
 import TagIcon from "@mui/icons-material/Tag";
 import ListItemText from "@mui/material/ListItemText";
 import Skeleton from "@mui/material/Skeleton";
+import { v4 as uuidv4 } from 'uuid';
 
 import { SideBlock } from "./SideBlock";
 
@@ -18,6 +19,7 @@ export const TagsBlock = ({ items, isLoading = true }) => {
           <a
             style={{ textDecoration: "none", color: "black" }}
             href={`/tags/${name}`}
+            key={uuidv4()}
           >
             <ListItem key={i} disablePadding>
               <ListItemButton>

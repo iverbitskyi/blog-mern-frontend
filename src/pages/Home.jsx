@@ -34,16 +34,15 @@ export const Home = () => {
           isPostsLoading ? (
             <Post key={index} isLoading={true} />
           ) : (
-            <Post
+            <Post key={obj._id}
               _id={obj._id}
               title={obj.title}
-              imageUrl={obj.i}
+              imageUrl={obj.imageUrl}
               user={obj.user}
               createdAt={obj.createdAt}
               viewsCount={obj.viewsCount}
               commentsCount={3}
               tags={obj.tags}
-              isLoading
               isEditable
             />
           ),

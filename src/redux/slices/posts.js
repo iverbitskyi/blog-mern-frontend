@@ -25,7 +25,7 @@ const initialState = {
 const postsSlice = createSlice({
     name: 'posts',
     initialState,
-    reducers: {},
+    reducer: {},
     extraReducers: {
         [fetchPosts.pending]: (state) => {
             state.posts.items = [];
@@ -54,5 +54,5 @@ const postsSlice = createSlice({
     },
 });
 
-export const postsReducer = postsSlice.reducers;
+export const postsReducer = postsSlice.reducer;
 
